@@ -34,11 +34,8 @@ public class Main
     		foundCargo += cargo[c];
     		if (foundCargo != 713) {
     		    System.out.println("You did not find the cargo. Enter locations again.");
+				foundCargo = 0;
     		}
-    		else {
-    		    break;
-    		}
-    		foundCargo = 0;
     		cargo[boxKm1] = 0;
     		cargo[boxKm2] = 0;
     		cargo[boxKm3] = 0;
