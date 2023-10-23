@@ -23,13 +23,10 @@ public class Main
 		System.out.println("Enter the location (km) ");
 		
 		while (foundCargo != 713) {
-			while (true) {
+			while (boxKm1 == boxKm2 || boxKm2 == boxKm3 || boxKm1 == boxKm3) {
 				boxKm1 = random.nextInt(8);
 				boxKm2 = random.nextInt(8);
 				boxKm3 = random.nextInt(8);
-				if (boxKm1 != boxKm2 && boxKm2 != boxKm3 && boxKm1 != boxKm3) {
-        		    break;
-        		}
 			}
     		cargo[boxKm1] = boxKg1;
     		cargo[boxKm2] = boxKg2;
