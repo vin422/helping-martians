@@ -39,12 +39,9 @@ public class Main
     		    System.out.print(cargo[i] + " ");
     		}
     		System.out.print("\n");
-    		int a = scanner.nextInt();
-    		foundCargo += cargo[a];
-    		int b = scanner.nextInt();
-    		foundCargo += cargo[b];
-    		int c = scanner.nextInt();
-    		foundCargo += cargo[c];
+    		foundCargo += cargo[getFirstNumber()];
+    		foundCargo += cargo[getSecondNumber()];
+    		foundCargo += cargo[getThirdNumber()];
     		if (foundCargo != 713) {
     		    System.out.println("You did not find the cargo. Enter locations again.");
 				foundCargo = 0;
@@ -54,5 +51,20 @@ public class Main
     		cargo[boxKm3] = 0;
 		}
 		System.out.print("You found all the cargo.");
+	}
+	public static int getFirstNumber() {
+		Scanner scanner = new Scanner (System.in);
+		int a = scanner.nextInt();
+		return a;
+	}
+	public static int getSecondNumber() {
+		Scanner scanner = new Scanner (System.in);
+		int b = scanner.nextInt();
+		return b;
+	}
+	public static int getThirdNumber() {
+		Scanner scanner = new Scanner (System.in);
+		int c = scanner.nextInt();
+		return c;
 	}
 }
