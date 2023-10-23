@@ -7,9 +7,14 @@ public class Main
 		Random random = new Random();
 		
 		int[] cargo = new int [8];
-		int boxKg1 = random.nextInt(710) + 1;
-		int boxKg2 = random.nextInt(713 - boxKg1) + 1;
-		int boxKg3 = 713 - (boxKg1 + boxKg2);
+		int boxKg1 = 0;
+		int boxKg2 = 0;
+		int boxKg3 = 0;
+		while (boxKg1 == boxKg2 || boxKg2 == boxKg3 || boxKg1 == boxKg3) {
+    		boxKg1 = random.nextInt(710) + 1;
+    		boxKg2 = random.nextInt(713 - boxKg1) + 1;
+    		boxKg3 = 713 - (boxKg1 + boxKg2);
+		}
 		int foundCargo = 0;
 		int boxKm1 = 0;
 		int boxKm2 = 0;
