@@ -11,13 +11,21 @@ public class Main
 		int boxKg2 = random.nextInt(713 - boxKg1) + 1;
 		int boxKg3 = 713 - (boxKg1 + boxKg2);
 		int foundCargo = 0;
+		int boxKm1 = 0;
+		int boxKm2 = 0;
+		int boxKm3 = 0;
 		
 		System.out.println("Enter the location (km) ");
 		
 		while (foundCargo != 713) {
-    		int boxKm1 = random.nextInt(8);
-    		int boxKm2 = random.nextInt(8);
-    		int boxKm3 = random.nextInt(8);
+			while (true) {
+				boxKm1 = random.nextInt(8);
+				boxKm2 = random.nextInt(8);
+				boxKm3 = random.nextInt(8);
+				if (boxKm1 != boxKm2 && boxKm2 != boxKm3 && boxKm1 != boxKm3) {
+        		    break;
+        		}
+			}
     		cargo[boxKm1] = boxKg1;
     		cargo[boxKm2] = boxKg2;
     		cargo[boxKm3] = boxKg3;
